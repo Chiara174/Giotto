@@ -1,0 +1,7 @@
+<h1>Furnitures#new</h1>
+<%= simple_form_for [@furniture, @user] do |f| %>
+  <%= f.input :title %>
+  <%= f.input :description %>
+  <%= f.input :image_url %>
+  <%= f.submit %>
+<% end %>
