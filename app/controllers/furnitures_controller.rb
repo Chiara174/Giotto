@@ -1,18 +1,22 @@
 class FurnituresController < ApplicationController
-  before_action :set_user, only: [:new, :create]
-  
+
   def new
     @furniture = Furniture.new
   end
 
   def create
     @furniture = Furniture.new(params_furniture)
-    @furniture.user = @user
+    @furniture.user = current_user
     if @furniture.save
-      redirect_to @user
+      redirect_to furniture_path(@furniture)
     else
       render :new
     end
+  end
+
+
+  def show
+    @furniture = Furniture.find(params[:id])
   end
 
   def index
@@ -22,14 +26,11 @@ class FurnituresController < ApplicationController
 
 
 
+
+
   private
 
-  def set_user
-    @user = User.find(params[:user_id])
-  end
-
-
   def params_furniture
-    params.require(:furniture).permit(:title, :description, :price, :number_items, :furniture_type, :zipcode)
+    params.require(:furniture).permit(:title, :description, :price, :number_items, :furniture_type, :zipcode, :photo)
   end
 end
