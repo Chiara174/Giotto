@@ -8,8 +8,8 @@
 </div>
 
   <div class="container">
-    <div class= "space-between">
-      <% @furnitures.each do |furniture| %>
+    <% @furnitures.each do |furniture| %>
+      <div class= "justify-content">
         <div class="card-product">
           <div>
             <h2><%= furniture.title %></h2>
@@ -29,9 +29,9 @@
           <div>
             <p><%= furniture.zipcode %></p>
           </div>
-          <%= link_to "See the product", furniture_path(furniture), method: :show, class: "btn btn-danger" %>
+          <%= link_to "Rent now", furniture_path(furniture), method: :show, class: "btn btn-danger" %>
         </div>
-      <% end %> 
-    </div>
+      </div>
+    <% end %> 
   </div>
 <div>
