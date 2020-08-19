@@ -9,28 +9,26 @@
 
   <div class="container">
     <% @furnitures.each do |furniture| %>
-      <div class= "justify-content">
-        <div class="card-product">
-          <div>
-            <h2><%= furniture.title %></h2>
-          </div>
-          <div>
-            <p><%= furniture.description %></p>
-          </div> 
-          <div>
-            <p><%= furniture.price %><p>€</p></p>
-          </div> 
-          <div>
-            <p><%= furniture.number_items %></p>
-          </div>
-          <div>
-            <p><%= furniture.furniture_type %></p>
-          </div>
-          <div>
-            <p><%= furniture.zipcode %></p>
-          </div>
-          <%= link_to "Rent now", furniture_path(furniture), method: :show, class: "btn btn-danger" %>
+      <div class="card-product d-flex justify-content-between align-items-center">
+        <div>
+          <h2><%= furniture.title %></h2>
         </div>
+        <div>
+          <p><%= furniture.description %></p>
+        </div> 
+        <div>
+          <p><%= furniture.price %>€</p>
+        </div> 
+        <div>
+          <p><%= furniture.number_items %></p>
+        </div>
+        <div>
+          <p><%= furniture.furniture_type %></p>
+        </div>
+        <div>
+          <p><%= furniture.zipcode %></p>
+        </div>
+        <%= link_to "Rent now", furniture_path(furniture), method: :show, class: "btn btn-danger" %>
       </div>
     <% end %> 
   </div>
