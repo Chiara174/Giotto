@@ -1,5 +1,6 @@
 class FurnituresController < ApplicationController
   before_action :set_user, only: [:new, :create]
+  
   def new
     @furniture = Furniture.new
   end
@@ -13,6 +14,11 @@ class FurnituresController < ApplicationController
       render :new
     end
   end
+
+  def index
+    @furnitures = Furniture.all
+  end
+
 
 
 
