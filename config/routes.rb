@@ -7,6 +7,6 @@ Rails.application.routes.draw do
     resources :bookings
   end
 
-  delete '/furnitures/:id', to 'furnitures#destroy', as: 'furniture'
+  resources :furnitures, only: [:destroy]
 
 end
