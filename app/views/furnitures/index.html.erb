@@ -1,0 +1,37 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://www.smow.com/pics/vt-142-001/vitra-homedesk-09_zoom.jpg');">
+  <div class ="container">
+    <div class= "text-center"> 
+      <h1> Explore the furniture! </h1> 
+      <p> Find the perfect second-hand home office set </p>
+    </div>
+  </div>
+</div>
+
+  <div class="container">
+    <div class= "space-between">
+      <% @furnitures.each do |furniture| %>
+        <div class="card-product">
+          <div>
+            <h2><%= furniture.title %></h2>
+          </div>
+          <div>
+            <p><%= furniture.description %></p>
+          </div> 
+          <div>
+            <p><%= furniture.price %><p>€</p></p>
+          </div> 
+          <div>
+            <p><%= furniture.number_items %></p>
+          </div>
+          <div>
+            <p><%= furniture.furniture_type %></p>
+          </div>
+          <div>
+            <p><%= furniture.zipcode %></p>
+          </div>
+          <%= link_to "See the product", furniture_path(furniture), method: :show, class: "btn btn-danger" %>
+        </div>
+      <% end %> 
+    </div>
+  </div>
+<div>
