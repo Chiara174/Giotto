@@ -11,3 +11,97 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+
+
+
+// -------- Dashboard -------
+.main{
+  height: 100vh;
+  display: flex;
+}
+.col-size {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.sidebars{
+  display: flex;
+  background-color: #F8F4ED;
+  flex-grow: 2;
+}
+
+.conversation {
+  display: flex;
+  align-items: center;
+  flex-grow: 10;
+}
+
+h1,h2 {
+  color: lightgray;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 16px;
+  margin-top: 35px;
+
+}
+h3 {
+  text-align:center;
+}
+h1 {
+  font-size: 18px;
+  color: #EFC88B;
+}
+
+.banner p {
+  color: white;
+}
+
+
+.container {
+  max-width: 1000px;
+  display: block;
+  margin: auto;
+}
+
+
+.header {
+  background: #F8F4ED;
+  overflow: auto;
+  line-height: 1.7em;
+}
+
+
+
+h1 {
+  text-align: center;
+  color: white;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+  margin-top: 35px;
+}
+
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
