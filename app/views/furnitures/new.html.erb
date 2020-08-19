@@ -1,7 +1,8 @@
 <h1>Furnitures#new</h1>
-<%= simple_form_for [@furniture, @user] do |f| %>
+<%= simple_form_for [@furniture] do |f| %>
   <%= f.input :title %>
   <%= f.input :description %>
-  <%= f.input :image_url %>
-  <%= f.submit %>
+  <%= f.input :photo, as: :file %>
+  <%= f.submit "Create", class: "btn btn-primary my-3" %>
 <% end %>
+

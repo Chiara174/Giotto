@@ -1,0 +1,14 @@
+<div class="container">
+  <h1> My furniture </h1>
+
+    <div class="card-product">
+      <%= cl_image_tag @furniture.photo.key, crop: :fill %>
+      <div class="card-product-infos">
+        <h2><%= @furniture.title %></h2>
+        <p><%= @furniture.description %></p>
+      </div>
+
+    </div>
+
+
+</div>
