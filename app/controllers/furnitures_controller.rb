@@ -19,6 +19,13 @@ class FurnituresController < ApplicationController
   end
 
   def index
+
+    if params[:category].present?
+      @furnitures = Furniture.where(furniture_type: params[:category])
+    else
+      @furnitures = Furniture.all
+    end
+
     @furnitures = Furniture.all
     @furnitures = Furniture.geocoded
 
@@ -28,6 +35,7 @@ class FurnituresController < ApplicationController
         lng: furniture.longitude
       }
     end  
+
   end
 
 
