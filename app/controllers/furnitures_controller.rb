@@ -14,7 +14,6 @@ class FurnituresController < ApplicationController
     end
   end
 
-
   def show
     @furniture = Furniture.find(params[:id])
   end
@@ -22,10 +21,6 @@ class FurnituresController < ApplicationController
   def index
     @furnitures = Furniture.all
   end
-
-
-
-
 
 
   private
