@@ -20,6 +20,7 @@ class BookingsController < ApplicationController
 
 
 
+
   private
 
   def params_booking

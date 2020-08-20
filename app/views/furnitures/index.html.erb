@@ -4,8 +4,37 @@
       <h1> Explore the furniture! </h1>
       <p> Find the perfect second-hand home office set </p>
     </div>
+
   </div>
 </div>
+    <div class="container">
+      <div class="card-product-small d-flex justify-content-around align-items-center">
+         <div class="">
+      <%= link_to furnitures_path(category: "") do %>
+        <span> All </span>
+      <% end %>
+    </div>
+
+    <div class="">
+      <%= link_to furnitures_path(category: "Chair") do %>
+        <span> Chair </span>
+      <% end %>
+    </div>
+
+    <div class="">
+      <%= link_to furnitures_path(category: "Desk") do %>
+        <span> Desk </span>
+      <% end %>
+    </div>
+
+    <div class="">
+      <%= link_to furnitures_path(category: "Lamp") do %>
+        <span> Lamp </span>
+      <% end %>
+    </div>
+      </div>
+    </div>
+
 
   <div class="container">
     <% @furnitures.each do |furniture| %>
