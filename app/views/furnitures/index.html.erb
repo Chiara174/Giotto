@@ -28,7 +28,7 @@
         <div>
           <p><%= furniture.zipcode %></p>
         </div>
-        <%= link_to "Rent now", furniture_path(furniture), method: :show, class: "btn btn-danger" %>
+        <%= link_to "Rent now", new_furniture_booking_path(furniture), method: :show, class: "btn btn-danger" %>
       </div>
     <% end %>
   </div>

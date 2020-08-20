@@ -13,10 +13,15 @@
 
   <body>
     <nav class="navbar navbar-light bg-dark justify-content-between">
-       <a class="navbar-brand"> </a>
-         <h1>  Giotto </h1>
+      <a class="navbar-brand"> </a>
+      <div class = "container">
+        <%= image_tag "logowhite.png", class:"logo align-content-center" %>
+        <h1> <%= link_to "Giotto Dashboard", dashboard_path %> </h1>
+        <h1> <%= link_to "Explore the furnitures", furnitures_path %> </h1>
+        <h1> <%= link_to "Log-in", new_user_session_path %> </h1>
+      </div>
+    </nav>
 
-</nav>
     <%= yield %>
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
