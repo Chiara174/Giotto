@@ -19,17 +19,29 @@ class FurnituresController < ApplicationController
   end
 
   def index
+
     if params[:category].present?
       @furnitures = Furniture.where(furniture_type: params[:category])
     else
       @furnitures = Furniture.all
     end
+
+    @furnitures = Furniture.all
+    @furnitures = Furniture.geocoded
+
+    @markers = @furnitures.map do |furniture|
+      {
+        lat: furniture.latitude,
+        lng: furniture.longitude
+      }
+    end  
+
   end
 
 
   private
 
   def params_furniture
-    params.require(:furniture).permit(:title, :description, :price, :number_items, :furniture_type, :zipcode, :photo)
+    params.require(:furniture).permit(:title, :description, :price, :number_items, :furniture_type, :zipcode, :photo, :address)
   end
 end

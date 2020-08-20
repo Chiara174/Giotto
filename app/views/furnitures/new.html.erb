@@ -3,9 +3,14 @@
   <h2>Rent it to someone!</h2>
   <%= simple_form_for [@furniture] do |f| %>
     <%= f.input :title %>
+    <%= f.input :furniture_type %>
     <%= f.input :description %>
     <%= f.input :price %>
+
     <%= f.input :furniture_type, collection: [ "Chair", "Desk", "Lamp"] %>
+
+    <%= f.input :address %>
+
     <%= f.input :photo, as: :file %>
     <%= f.submit "Create", class: "btn btn-primary my-3" %>
   <% end %>
