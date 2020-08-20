@@ -219,6 +219,7 @@ h1 {
   color: #111;
   font-size: 17px;
   margin:4px;
+  margin-bottom: 25px;
 }
 .side-user p {
   padding: 0px;
@@ -241,7 +242,7 @@ img {
 }
 
 .separator-large {
-  margin: 3px 8px;
+  margin: 3px 45px;
   height: 1px;
   width: 500px;
   background: #111;
@@ -263,11 +264,34 @@ img {
 
 }
 
+.dashboard-title {
+  margin-left: 25px;
+  font-weight: bold;
+}
+
+.product-details {
+  padding-right: 32px;
+  margin: 15px;
+  margin-bottom: 25px;
+  border-radius: 4px;
+  font-size: 12px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
 
 
+.product-picture {
+  border-radius: 50%;
+}
 
+.furniture-title {
+  font-size: 16px;
+}
 
-
-
+.background-offer {
+  overflow-y: scroll;
+  max-height: 80vh;
+  border-radius: 5px;
+}
 
 
