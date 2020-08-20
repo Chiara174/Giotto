@@ -16,7 +16,7 @@
       </div>
     <div class="side-action">
     <h2>Invoices</h2>
-    <h2>Expenses</h2>
+    <h2>New offer</h2>
      <h2>Contact</h2>
       <h2>Logout </h2>
       </div>
@@ -30,12 +30,12 @@
       <div class="separator-large"></div>
         <div class="row">
           <div class="col-md-9 background-offer">
-            <div class="row justify-content-around">
+            <div class=" product-details ">
               <div class="col-md-1"></div>
-              <div><p>Name:</p></div>
-              <div><p>Status:</p></div>
-              <div><p>Price: </p></div>
-              <div><p>Details</p></div>
+              <div class="align-items-left align-middle text-center my-auto"><p class="furniture-title item-product">Name:</p></div>
+              <div class="align-items-left align-middle text-center my-auto"><p class="furniture-title item-product">Status:</p></div>
+              <div class="align-items-left align-middle text-center my-auto"><p class="furniture-title item-product">Price: </p></div>
+              <div class="align-items-left align-middle text-center my-auto"><p class="furniture-title item-product">Details</p></div>
             </div>
 
             <% current_user.furnitures.each do |furniture| %>
@@ -47,7 +47,7 @@
                       <h3 class="furniture-title item-product"><%= furniture.title %></h3>
                     </div>
                     <div class="item-product text-center my-auto"  >
-                      <%= link_to "Available", furniture_path(furniture), method: :show, class: "btn btn-danger" %>
+                      <%= link_to "Rented", furniture_path(furniture), method: :show, class: "btn btn-success" %>
                     </div>
                     <div class="item-product text-center my-auto" >
                       <p class=""><%= furniture.price %>€</p>
@@ -56,7 +56,11 @@
                     <td><%= link_to 'Details', furniture_path(furniture) %></td>
                     </div>
               </div>
-            <% end %></div>
+            <% end %>
+
+                    </div>
+              </div>
+          </div>
 
         </div>
     </div>
