@@ -165,5 +165,110 @@ h1 {
 
 .link-card {
   text-decoration: none;
+}
+
+// -------- Dashboard new --------
+.side-panel {
+
+  padding: 0px;
+}
+
+.main-panel {
+
+  padding: 0px;
+}
+
+.col-md-10 {
+  padding: 0px;
+  background-color: #F8F4ED;
+  margin: 0px;
+}
+.col-md-2 {
+  padding: 0px;
+  background-color: #FFFFFF;
+}
+.main {
+  height: 100vh;
+  display: flex;
+}
+
+.side-bar {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.side-user {
+  padding: 0px;
+  align-items: center;
+  padding-top: 45px;
+  font-size: 16px;
+  line-height: 0.75em;
 
 }
+.side-action{
+  padding: 0px;
+}
+
+.logo {
+  border-radius: 50%;
+  box-shadow: 3px 3px 3px rgba(0,0,0,0.2);
+  margin-bottom: 25px;
+}
+
+.side-action h2 {
+  color: #111;
+  font-size: 17px;
+  margin:4px;
+}
+.side-user p {
+  padding: 0px;
+  align-items: center;
+  text-align: center;
+  padding: 3px;
+  margin: 3px;
+}
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.separator {
+  margin: 20px auto;
+  height: 1px;
+  width: 100px;
+  background: #111;
+}
+
+.separator-large {
+  margin: 3px 8px;
+  height: 1px;
+  width: 500px;
+  background: #111;
+  align: left;
+}
+
+.main-panel h2 {
+  font-size: 25px;
+  color: #111;
+  text-align: left;
+}
+
+.background-offer {
+   background-color: white;
+   box-shadow: 3px 3px 3px rgba(0,0,0,0.2);
+   padding: 20px;
+   margin: 25px;
+   margin-left: 60px;
+
+}
+
+
+
+
+
+
+
+
+
