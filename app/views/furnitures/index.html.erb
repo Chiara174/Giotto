@@ -11,7 +11,7 @@
     <% @furnitures.each do |furniture| %>
       <div class="card-product d-flex justify-content-between align-items-center">
         <div>
-          <%= cl_image_tag furniture.photo.key, crop: :fill %>
+         <%if furniture.photo.attached?%><%= cl_image_tag furniture.photo.key, crop: :fill %><%end%>
         </div>
         <div>
           <h2><%= furniture.title %></h2>
