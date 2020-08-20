@@ -15,7 +15,10 @@
     <nav class="navbar navbar-light bg-dark justify-content-between">
       <a class="navbar-brand"> </a>
       <div class = "container">
-        <%= image_tag "logowhite.png", class:"logowhite align-content-center" %>
+        <%= link_to root_path do %>
+          <%= image_tag "logowhite.png", class:"logowhite align-content-center" %> 
+        <%end%>
+        <h1> <%= link_to "Post a furniture", new_furniture_path %> </h1>
         <h1> <%= link_to "Giotto Dashboard", dashboard_path %> </h1>
         <h1> <%= link_to "Explore the furnitures", furnitures_path %> </h1>
         <h1> <%= link_to "Log-in", new_user_session_path %> </h1>

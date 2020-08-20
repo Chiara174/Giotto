@@ -1,9 +1,11 @@
-<h1>Furnitures#new</h1>
-<%= simple_form_for [@furniture] do |f| %>
-  <%= f.input :title %>
-  <%= f.input :description %>
-  <%= f.input :price %>
-  <%= f.input :photo, as: :file %>
-  <%= f.submit "Create", class: "btn btn-primary my-3" %>
-<% end %>
-
+<div class = "container">
+  <h2>You don't know what to do with that old Desk?</h2>
+  <h2>Rent it to someone!</h2>
+  <%= simple_form_for [@furniture] do |f| %>
+    <%= f.input :title %>
+    <%= f.input :description %>
+    <%= f.input :price %>
+    <%= f.input :photo, as: :file %>
+    <%= f.submit "Create", class: "btn btn-primary my-3" %>
+  <% end %>
+</div>
