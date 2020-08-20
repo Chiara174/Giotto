@@ -19,7 +19,11 @@ class FurnituresController < ApplicationController
   end
 
   def index
-    @furnitures = Furniture.all
+    if params[:category].present?
+      @furnitures = Furniture.where(furniture_type: params[:category])
+    else
+      @furnitures = Furniture.all
+    end
   end
 
 
