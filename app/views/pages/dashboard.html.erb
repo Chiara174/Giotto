@@ -35,6 +35,9 @@
 
             <% current_user.furnitures.each do |furniture| %>
               <div class="card-product d-flex justify-content-between align-items-center">
+                  <div>
+                    <%= cl_image_tag furniture.photo.key, crop: :fill %>
+                  </div>
                 <div>
                   <h2><%= furniture.title %></h2>
                 </div>
