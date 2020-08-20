@@ -7,7 +7,7 @@ class FurnituresController < ApplicationController
   def create
     @furniture = Furniture.new(params_furniture)
     @furniture.user = current_user
-    if @furniture.save
+    if @furniture.save!
       redirect_to furniture_path(@furniture)
     else
       render :new
