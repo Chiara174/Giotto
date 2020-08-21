@@ -7,11 +7,7 @@ const fitMapToMarkers = (map, markers) => {
 const initMapbox = () => {
   const mapElement = document.getElementById('map');
 
-
-
-
 if (mapElement) {
-  // [ ... ]
   mapboxgl.accessToken = mapElement.dataset.mapboxApiKey;
   const map = new mapboxgl.Map({
     container: 'map',
@@ -23,7 +19,7 @@ if (mapElement) {
       .setLngLat([ marker.lng, marker.lat ])
       .addTo(map);
   });
-  fitMapToMarkers(map, markers); 
+  fitMapToMarkers(map, markers);
 
 }
 

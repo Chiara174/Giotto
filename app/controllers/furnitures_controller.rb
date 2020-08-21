@@ -16,6 +16,12 @@ class FurnituresController < ApplicationController
 
   def show
     @furniture = Furniture.find(params[:id])
+    @markers = [@furniture].map do |furniture|
+      {
+        lat: furniture.latitude,
+        lng: furniture.longitude
+      }
+    end
   end
 
   def index
@@ -25,7 +31,6 @@ class FurnituresController < ApplicationController
     else
       @furnitures = Furniture.all
     end
-end
 
     @furnitures = Furniture.all
     @furnitures = Furniture.geocoded
@@ -36,13 +41,7 @@ end
         lng: furniture.longitude
       }
     end
-
-        @markersonly= @furnitures.map do |furniture|
-      {
-        lat: furniture.latitude,
-        lng: furniture.longitude
-      }
-    end
+  end
   private
 
   def params_furniture

@@ -276,7 +276,7 @@ img {
    background-color: white;
    box-shadow: 3px 3px 3px rgba(0,0,0,0.2);
    padding: 20px;
-   
+
 }
 
 .dashboard-title {
@@ -308,7 +308,12 @@ img {
   max-height: 80vh;
   border-radius: 5px;
 }
-
+.background-offer-dash {
+  overflow-y: scroll;
+  max-height: 80vh;
+  border-radius: 5px;
+  margin-left: 45px;
+}
 .filter-action {
   padding: 15px;
   text-decoration: none;
