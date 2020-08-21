@@ -8,6 +8,7 @@
   </div>
 </div>
 
+<div class="container">
     <div class="container-filter">
       <div class="card-product-small justify-content-left align-items-center">
          <div class="filter">
@@ -35,6 +36,7 @@
     </div>
       </div>
     </div>
+</div>
 
 
 <div class="container d-flex">
@@ -60,7 +62,9 @@
           <p><%= furniture.furniture_type %></p>
         </div>
         <div>
-          <%= link_to "Rent now", new_furniture_booking_path(furniture), class: "btn btn-danger" %>
+
+          <%= link_to "See item", furniture_path(furniture), class: "btn btn-danger" %>
+
         </div>
       </div>
     <% end %>
