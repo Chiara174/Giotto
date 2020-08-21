@@ -11,7 +11,8 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
-@import 'mapbox-gl/dist/mapbox-gl';
+
+@import "mapbox-gl/dist/mapbox-gl";
 
 
 // -------- Dashboard -------
@@ -144,7 +145,7 @@ h1 {
 
 .card-product img {
   height: 100%;
-  width: 120px;
+  width: 120PX;
   object-fit: cover;
 }
 
@@ -268,9 +269,7 @@ img {
    background-color: white;
    box-shadow: 3px 3px 3px rgba(0,0,0,0.2);
    padding: 20px;
-   margin: 25px;
-   margin-left: 60px;
-
+   
 }
 
 .dashboard-title {
@@ -309,5 +308,4 @@ img {
   color: pink;
 
 }
-
 
