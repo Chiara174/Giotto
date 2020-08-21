@@ -37,6 +37,12 @@ end
       }
     end
 
+        @markersonly= @furnitures.map do |furniture|
+      {
+        lat: furniture.latitude,
+        lng: furniture.longitude
+      }
+    end
   private
 
   def params_furniture

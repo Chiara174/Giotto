@@ -179,6 +179,10 @@ h1 {
 }
 
 // -------- Dashboard new --------
+.main a {
+  color: black;
+}
+
 .side-panel {
 
   padding: 0px;
@@ -386,6 +390,76 @@ img {
   width: 180px;
   background: #111;
 }
+
+
+
+// ------------- Show page --------------
+
+
+
+.flex-container {
+  display: flex;
+  margin-left: 200px;
+}
+
+.img {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 150px;
+}
+
+.img:hover {
+  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+
+.index-img {
+
+}
+
+.card-index-info {
+  margin: 50px;
+  margin-right: 100px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  border-radius: 5px;
+}
+
+.index-img-container {
+ margin: 50px;
+ margin-left: 100px;
+ box-shadow: 0 0 10px rgba(0,0,0,0.2);
+ border: 8px solid white;
+ border-radius: 5px;
+ margin-bottom: 10px;
+}
+
+.index-title {
+  text-align: left;
+  padding: 0px;
+  margin: 0px;
+  font-size: 25px;
+  color: black;
+
+}
+
+.index-price {
+  color: grey;
+}
+.index-booking a {
+  text-decoration: none;
+  color: white;
+}
+
+.index-booking a:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.geo-map {
+  padding-left: 105px;
+
+}
+
 
 
 
