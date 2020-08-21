@@ -36,7 +36,7 @@
     </div>
 
     <div class="content-offers">
-      <% current_user.furnitures.each do |furniture| %>
+      <% current_user&.furnitures&.each do |furniture| %>
         <div class="card-index col-md-3 ">
           <img class="card-img-top" src="/assets/img_test.png" alt="Card image cap">
           <div class="card-body">
