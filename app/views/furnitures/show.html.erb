@@ -1,28 +1,48 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= cl_image_tag @furniture.photo.key, crop: :fill %>);">
-  <div class="container">
-    <div class= "text-center">
-      <h1> My furniture </h1>
-    </div>
-  </div>
-</div>
+
 
 <body>
 
+  <div >
 
+<div class="flex-container">
 
+  <div class="flex-item">
+    <div class="index-img-container">
+    <a target="_blank" href="" class="index-img">
+    <%= cl_image_tag @furniture.photo.key, width: 400, height: 300, crop: :fill %>
+</a>
+</div>
+<div class="geo-map">
+  <div class="geo-map-inner" id="map"
+    style="width: 400px; height: 250px;"
+    data-markers="<%= @marker.to_json %>"
+    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
+</div>
+  </div>
+  <div class="flex-item">
+      <div class="card card-index-info" style="width: 25rem">
+  <div class="card-body">
+    <h2 class="furniture-title item-product index-title"><%= @furniture.title %></h2>
+    <h5 class="furniture-title item-product index-price"><%= @furniture.price %> €/ month</h5>
 
+    <p class="card-text"><%= @furniture.description %></p>
 
+    <div class="btn btn-danger index-booking">
+      <td class="index-booking"><%= link_to 'Rent now', new_furniture_booking_path(@furniture) %></td>
+    </div>
+  </div>
+  </div>
+</div>
+
+<div>
+</div>
+
+</div>
+</div>
 
 </body>
 
-
-<div class="card-product">
-  <%= cl_image_tag @furniture.photo.key, crop: :fill %>
-  <div class="card-product-infos">
-    <h2><%= @furniture.title %></h2>
-    <p><%= @furniture.description %></p>
-  </div>
-</div>
 
 
 
