@@ -12,7 +12,7 @@ class BookingsController < ApplicationController
     @booking.furniture = @furniture
     @booking.status = "pending"
     if @booking.save!
-      redirect_to furniture_path(@furniture)
+      redirect_to dashboard_path(@dashboard)
     else
       render :new
     end

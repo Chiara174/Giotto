@@ -276,7 +276,7 @@ img {
    background-color: white;
    box-shadow: 3px 3px 3px rgba(0,0,0,0.2);
    padding: 20px;
-   
+
 }
 
 .dashboard-title {
@@ -390,8 +390,14 @@ img {
   width: 180px;
   background: #111;
 }
+// ------ booking form -------
 
-
+.container-booking{
+  max-width: 1000px;
+  display: block;
+  margin: auto;
+  padding-top: 35px
+}
 
 // ------------- Show page --------------
 
