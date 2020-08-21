@@ -7,6 +7,7 @@
 
   </div>
 </div>
+
     <div class="container-filter">
       <div class="card-product-small justify-content-left align-items-center">
          <div class="filter">
@@ -35,23 +36,39 @@
       </div>
     </div>
 
-    <div class="content-offers">
-      <% current_user&.furnitures&.each do |furniture| %>
-        <div class="card-index col-md-3 ">
-          <img class="card-img-top" src="/assets/img_test.png" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title"> <%= furniture.title %></h5>
-            <p class="card-text"><%= furniture.price %>€ / month</p>
-            <a href="#" class="btn btn-primary">Rent now</a>
-          </div>
-        </div>
-       <% end %>
-      </div>
 
+<div class="container d-flex">
+  <div class="background-offer">
+    <% @furnitures.each do |furniture| %>
+      <div class="card-product d-flex justify-content-around">
+        <div>
+          <%if furniture.photo.attached?%><%= cl_image_tag furniture.photo.key, crop: :fill %><%end%>
+        </div>
+        <div>
+          <h2><%= furniture.title %></h2>
+        </div>
+        <div>
+          <p><%= furniture.description %></p>
+        </div>
+        <div>
+          <p><%= furniture.price %>€</p>
+        </div>
+        <div>
+          <p><%= furniture.number_items %></p>
+        </div>
+        <div>
+          <p><%= furniture.furniture_type %></p>
+        </div>
+        <div>
+          <%= link_to "Rent now", new_furniture_booking_path(furniture), method: :show, class: "btn btn-danger" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
 
   <div id="map"
-    style="width: 100%; height: 600px;"
+    style="width: 100%; height: 820px;"
     data-markers="<%= @markers.to_json %>"
     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
-<div>
+</div>
