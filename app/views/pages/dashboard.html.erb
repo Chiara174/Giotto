@@ -15,9 +15,9 @@
       <div class="separator"></div>
       </div>
     <div class="side-action">
-    <h2>Invoices</h2>
-    <h2>New offer</h2>
-     <h2>Contact</h2>
+    <h2>Your bookings</h2>
+     <h2>Your offers</h2>
+    <h2> <%= link_to 'New offer', new_furniture_path %></h2>
       <h2>Logout </h2>
       </div>
       </div>
@@ -38,7 +38,30 @@
               <div class="align-items-left align-middle text-center my-auto"><p class="furniture-title item-product">Details</p></div>
             </div>
 
+            <h5>Your offers</h5>
+            <div class="separator-dash"></div>
             <% current_user.furnitures.each do |furniture| %>
+              <div class="card-product product-details ">
+                  <div class="product-picture text-center">
+                    <%= cl_image_tag furniture.photo.key, crop: :fill %>
+                  </div>
+                    <div class="align-items-left align-middle text-center my-auto"  >
+                      <h3 class="furniture-title item-product"><%= furniture.title %></h3>
+                    </div>
+                    <div class="item-product text-center my-auto"  >
+                      <%= link_to "Rented", furniture_path(furniture), method: :show, class: "btn btn-success" %>
+                    </div>
+                    <div class="item-product text-center my-auto" >
+                      <p class=""><%= furniture.price %>€</p>
+                    </div>
+                    <div class="item-product text-center my-auto" >
+                    <td><%= link_to 'Details', furniture_path(furniture) %></td>
+                    </div>
+              </div>
+            <% end %>
+            <h5>Your bookings</h5>
+            <div class="separator-dash"></div>
+            <% current_user.bookings.map{|b| b.furniture }.each do |furniture| %>
               <div class="card-product product-details ">
                   <div class="product-picture text-center">
                     <%= cl_image_tag furniture.photo.key, crop: :fill %>

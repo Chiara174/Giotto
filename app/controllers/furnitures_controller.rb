@@ -25,6 +25,7 @@ class FurnituresController < ApplicationController
     else
       @furnitures = Furniture.all
     end
+end
 
     @furnitures = Furniture.all
     @furnitures = Furniture.geocoded
@@ -34,10 +35,7 @@ class FurnituresController < ApplicationController
         lat: furniture.latitude,
         lng: furniture.longitude
       }
-    end  
-
-  end
-
+    end
 
   private
 
