@@ -14,6 +14,11 @@
 
 @import "mapbox-gl/dist/mapbox-gl";
 
+// Font
+@font-face {
+   font-family: 'Roboto-Black';
+   src: url('/assets/fonts/Roboto-Black.ttf')
+}
 
 // -------- Dashboard -------
 .main{
@@ -138,8 +143,6 @@ h1 {
   margin-top: 32px;
   overflow: hidden;
   height: 50px;
-  background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
 }
 
@@ -306,6 +309,86 @@ img {
   padding: 15px;
   text-decoration: none;
   color: pink;
+}
+
+// ------ Index -------
+.card-index {
+  margin: 3px;
+  box-shadow: 3px 3px 3px rgba(0,0,0,0.2);
+  padding: 0px;
+
 
 }
+
+.filter {
+  padding-right: 35px;
+  font-size: 22px;
+  font-family: 'Roboto', sans-serif;
+  text-decoration: none;
+  color: pink;
+}
+
+.container-filter {
+ margin-left: 55px;
+}
+
+.filter span {
+  color: black;
+}
+
+
+.card-text {
+  color: gray;
+}
+
+.card-title {
+  margin-bottom: 0rem;
+}
+
+.main-container {
+  margin: 2px;
+}
+
+.cards-offers {
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+  padding: 16px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.card-offer {
+  background-size: cover;
+  background-position: center;
+  height: 150px;
+  border-radius: 1px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 22px;
+  color: white;
+  font-weight: bolder;
+  text-shadow: 0 0 10px rgba(0,0,0,0.7);
+}
+
+.content-offers {
+  display: block;
+  margin: 50px;
+  grid-template-columns: 1fr 1fr 1fr;
+
+}
+
+.separator-dash {
+  margin: 5px;
+  height: 1px;
+  width: 180px;
+  background: #111;
+}
+
+
+
+
+
 

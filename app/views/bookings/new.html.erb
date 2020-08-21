@@ -1,0 +1,9 @@
+<div class = "container">
+  <h2>Your're only a few steps away from your dream office!</h2>
+  <h2>Rent it now!</h2>
+  <%=simple_form_for [@furniture, @booking] do |f|%>
+      <%= f.input :start_date %>
+      <%= f.input :end_date %>
+      <%=f.submit "Confirm booking", class: "btn btn-primary my-3" %>
+<%end %>
+</div>

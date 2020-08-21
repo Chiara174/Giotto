@@ -12,6 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2020_08_20_142204) do
 
+
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -39,11 +40,11 @@ ActiveRecord::Schema.define(version: 2020_08_20_142204) do
   create_table "bookings", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.bigint "furniture_id", null: false
-    t.integer "start_date"
-    t.integer "end_date"
     t.string "status"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.date "start_date"
+    t.date "end_date"
     t.index ["furniture_id"], name: "index_bookings_on_furniture_id"
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end
@@ -58,9 +59,9 @@ ActiveRecord::Schema.define(version: 2020_08_20_142204) do
     t.integer "zipcode"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "address"
     t.float "latitude"
     t.float "longitude"
-    t.string "address"
     t.index ["user_id"], name: "index_furnitures_on_user_id"
   end
 
